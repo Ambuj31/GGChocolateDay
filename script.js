@@ -36,15 +36,25 @@ function finishGame() {
 }
 
 function chocolateRain() {
-  for (let i = 0; i < 25; i++) {
-    const c = document.createElement("div");
-    c.className = "choco";
-    c.textContent = "🍫";
-    c.style.left = Math.random() * 100 + "vw";
-    document.body.appendChild(c);
-    setTimeout(() => c.remove(), 3000);
-  }
+  let drops = 0;
+
+  const interval = setInterval(() => {
+    for (let i = 0; i < 3; i++) {
+      const c = document.createElement("div");
+      c.className = "choco";
+      c.textContent = "🍫";
+      c.style.left = Math.random() * 100 + "vw";
+      c.style.fontSize = 18 + Math.random() * 14 + "px";
+      document.body.appendChild(c);
+
+      setTimeout(() => c.remove(), 3000);
+    }
+
+    drops++;
+    if (drops > 10) clearInterval(interval); // ⏱️ duration control
+  }, 150);
 }
+
 
 /* 👉 Tap final screen to show signature */
 finalScreen.addEventListener("click", () => {
