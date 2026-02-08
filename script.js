@@ -21,11 +21,13 @@ playArea.addEventListener("click", () => {
     girl.style.left = `${x}%`;
 
     if (taps === maxTaps) {
-      girl.classList.remove("running");
-      message.textContent = "She finally caught it 🍫❤️";
-      chocolateRain();
-      setTimeout(() => popup.style.display = "flex", 1500);
-    }
+  girl.classList.remove("running");
+  document.querySelector(".name-bubble").style.display = "none";
+  message.textContent = "She finally caught it 🍫❤️";
+  chocolateRain();
+  setTimeout(() => popup.style.display = "flex", 1500);
+}
+
   }
 });
 
