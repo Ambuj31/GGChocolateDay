@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chocolate Day 🍫</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catch the Chocolate 🍫</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -13,42 +13,28 @@
 
 <div class="play-area" id="playArea">
 
-  <!-- Running Girl SVG -->
+  <!-- Girl -->
   <div id="girl" class="running">
     <div class="name-bubble">Gauri!</div>
-    <svg width="80" height="130" viewBox="0 0 80 130">
-      <circle cx="40" cy="25" r="18" fill="#f5cba7"/>
-      <rect x="25" y="45" width="30" height="50" rx="10" fill="#ff9aa2"/>
-
-      <!-- Legs -->
-      <line id="leg1" x1="35" y1="95" x2="25" y2="125" />
-      <line id="leg2" x1="45" y1="95" x2="55" y2="125" />
-    </svg>
+    <img src="assets/girl-3d.png" alt="Girl chasing chocolate">
   </div>
 
   <!-- Chocolate -->
   <div id="chocolate">
-    <svg width="60" height="60" viewBox="0 0 60 60">
-      <rect x="5" y="5" width="50" height="50" rx="8" fill="#5a2d0c"/>
-      <line x1="5" y1="30" x2="55" y2="30" stroke="#3e1f0f"/>
-      <line x1="30" y1="5" x2="30" y2="55" stroke="#3e1f0f"/>
-    </svg>
+    <div class="choco-3d"></div>
   </div>
 
 </div>
 
 <p id="message"></p>
 
-<!-- Popup -->
-<div id="popup">
-  <div class="popup-content">
-    <h2>🍫 Happy Chocolate Day</h2>
-    <p>
-      This chocolate ran away…  
-      but it always belonged to you ❤️
-    </p>
-    <button onclick="closePopup()">💖</button>
-  </div>
+<!-- Cinematic Ending -->
+<div id="final-scene">
+  <h2>For Gauri ❤️</h2>
+  <p>
+    Some chocolates are meant to be caught…<br>
+    Some hearts already are.
+  </p>
 </div>
 
 <script src="script.js"></script>
