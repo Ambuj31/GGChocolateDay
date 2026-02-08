@@ -1,128 +1,118 @@
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
   margin: 0;
   padding: 0;
-}
-
-body {
-  height: 100vh;
-  background: linear-gradient(180deg, #fff1e6, #ffe4c7);
-  font-family: 'Poppins', sans-serif;
+  height: 100%;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.title {
   font-family: 'Pacifico', cursive;
-  margin-top: 16px;
-  font-size: 26px;
-  color: #6b3b1e;
+  background: linear-gradient(to bottom, #ffe9ef, #ffd6e3);
 }
 
-.game-area {
+/* Headings */
+.title {
+  text-align: center;
+  margin-top: 14px;
+  font-size: 28px;
+  color: #6b2f0c;
+}
+
+.subtitle {
+  text-align: center;
+  margin-top: 4px;
+  font-size: 20px;
+  color: #8b3f1d;
+}
+
+/* Game Area */
+#gameArea {
   position: relative;
-  width: 100%;
-  height: 70vh;
-  margin-top: 10px;
+  width: 100vw;
+  height: calc(100vh - 120px);
 }
 
-.name-bubble {
+/* Chocolate */
+#chocolate {
   position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: white;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 14px;
-  color: #6b3b1e;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(#6b3a1e, #4a240f);
+  border-radius: 14px;
+  top: 25%;
+  left: 60%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+  transition: all 0.6s ease;
+}
+
+/* Girl */
+#girl-container {
+  position: absolute;
+  bottom: 8%;
+  left: 10%;
+  text-align: center;
+  transition: left 0.6s ease;
 }
 
 #girl {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  width: 120px;
-  animation: runLegs 0.5s infinite alternate;
+  width: 130px;
+  animation: run 0.35s infinite alternate;
 }
 
-@keyframes runLegs {
-  from { transform: translateY(0); }
-  to { transform: translateY(4px); }
+/* Running illusion */
+@keyframes run {
+  from { transform: translateY(0) rotate(1deg); }
+  to   { transform: translateY(-4px) rotate(-1deg); }
 }
 
-#chocolate {
-  position: absolute;
-  top: 40%;
-  left: 60%;
-  width: 70px;
-  transition: all 0.3s ease;
+/* Name Bubble */
+.name-bubble {
+  background: white;
+  padding: 6px 14px;
+  border-radius: 18px;
+  font-size: 16px;
+  margin-bottom: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-.hint {
-  font-size: 13px;
-  color: #7a4a2e;
-  margin-top: 8px;
+/* Final Screen */
+#finalScreen {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 236, 241, 0.97);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease;
+  text-align: center;
 }
 
-/* 🍫 Chocolate rain */
-.choco-rain {
+#finalScreen h1 {
+  font-size: 32px;
+  color: #6b2f0c;
+}
+
+#finalScreen p {
+  font-size: 22px;
+  color: #8b3f1d;
+  margin-top: 10px;
+}
+
+/* Chocolate Rain */
+.choco {
   position: fixed;
   top: -40px;
-  font-size: 24px;
-  animation: fall 2.5s linear forwards;
+  font-size: 26px;
+  animation: fall 3s linear infinite;
 }
 
 @keyframes fall {
   to {
     transform: translateY(110vh);
-    opacity: 0;
   }
-}
-
-/* ❤️ END SIGNATURE CARD */
-.signature-card {
-  position: fixed;
-  inset: 0;
-  background: rgba(255, 248, 240, 0.97);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease;
-  z-index: 50;
-}
-
-.signature-card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.signature-card h2 {
-  font-family: 'Pacifico', cursive;
-  font-size: 28px;
-  color: #5a2e1c;
-  margin-bottom: 10px;
-}
-
-.signature-card p {
-  font-size: 15px;
-  color: #7a4a2e;
-  margin-bottom: 20px;
-}
-
-.signature-card a {
-  font-size: 14px;
-  background: #25D366;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 22px;
-  text-decoration: none;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
