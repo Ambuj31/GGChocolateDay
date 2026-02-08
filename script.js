@@ -69,9 +69,9 @@ function showSignature() {
   card.innerHTML = `
     <h2>— Ambuj 🤍</h2>
     <p>Happy Chocolate Day, Gauri 🍫</p>
-    <a href="https://wa.me/?text=I%20caught%20the%20chocolate%20and%20my%20heart%20too%20🤍🍫" target="_blank">
-      Reply whenever you feel ready
-    </a>
+    <a href="https://wa.me/9111113431?text=This%20is%20for%20you%20%F0%9F%A4%8D%F0%9F%8D%AB" target="_blank">
+  Reply whenever you feel ready
+</a>
   `;
 
   document.body.appendChild(card);
