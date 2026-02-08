@@ -17,11 +17,13 @@ chocolate.addEventListener("click", () => {
 });
 
 function moveChocolate() {
-  const x = Math.random() * (area.clientWidth - 50);
-  const y = Math.random() * (area.clientHeight - 50);
+  const padding = 60;
+  const x = Math.random() * (area.clientWidth - padding);
+  const y = Math.random() * (area.clientHeight - padding);
   chocolate.style.left = x + "px";
   chocolate.style.top = y + "px";
 }
+
 
 function moveGirl() {
   girlWrapper.style.left = chocolate.style.left;
