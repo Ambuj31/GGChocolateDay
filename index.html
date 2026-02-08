@@ -2,26 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gauri’s Chocolate Chase 🍫❤️</title>
+  <title>Catch the Chocolate 🍫</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Mobile perfect -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <link rel="stylesheet" href="style.css" />
+  <!-- Handwritten font -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1 class="title">For Gauri ❤️</h1>
+  <h1 class="title">Catch the Chocolate 🍫</h1>
+  <h2 class="subtitle">For Gauri ❤️</h2>
 
-  <div class="game-area" id="gameArea">
-    <div class="name-bubble">Gauri!</div>
+  <div id="gameArea">
+    <div id="chocolate"></div>
 
-    <img src="assets/girl-3d.png" id="girl" alt="Girl running" />
-    <img src="assets/chocolate.png" id="chocolate" alt="Chocolate" />
+    <div id="girl-container">
+      <div class="name-bubble">Gauri!</div>
+      <img src="assets/girl-3d.png" id="girl" alt="Girl chasing chocolate">
+    </div>
   </div>
 
-  <p class="hint">Tap the chocolate 🍫</p>
+  <div id="finalScreen">
+    <h1>🍫 Happy Chocolate Day 🍫</h1>
+    <p>
+      You chased the chocolate,<br>
+      but caught my heart instead ❤️
+    </p>
+  </div>
 
   <script src="script.js"></script>
 </body>
