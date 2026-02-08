@@ -14,13 +14,28 @@
   <h1 class="title">For Gauri ❤️</h1>
 
   <div class="game-area" id="gameArea">
-    <div class="name-bubble">Gauri!</div>
 
-    <img src="assets/girl-3d.png" id="girl" />
-    <img src="assets/chocolate.png" id="chocolate" />
+    <!-- Girl + name -->
+    <div class="girl-wrapper" id="girlWrapper">
+      <div class="name-bubble">Gauri!</div>
+      <img src="assets/girl-3d.png" id="girl" />
+    </div>
+
+    <!-- Chocolate (emoji, no image) -->
+    <div id="chocolate">🍫</div>
   </div>
 
   <p class="hint">Tap the chocolate 🍫</p>
+
+  <!-- FINAL MESSAGE SCREEN -->
+  <div id="finalScreen">
+    <h1>🍫 Happy Chocolate Day 🍫</h1>
+    <p>
+      You chased the chocolate,<br />
+      but caught my heart instead ❤️
+    </p>
+    <span class="tap-text">Tap to continue</span>
+  </div>
 
   <script src="script.js"></script>
 </body>
