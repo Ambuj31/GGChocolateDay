@@ -27,23 +27,27 @@ body {
   height: 70vh;
 }
 
-.name-bubble {
+.girl-wrapper {
   position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 10px;
+  left: 20px;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name-bubble {
   background: white;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 14px;
+  padding: 5px 12px;
+  border-radius: 18px;
+  font-size: 13px;
+  margin-bottom: 6px;
   color: #6b3b1e;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 #girl {
-  position: absolute;
-  bottom: 10px;
-  left: 20px;
   width: 120px;
   animation: bounce 0.5s infinite alternate;
 }
@@ -53,11 +57,13 @@ body {
   to { transform: translateY(5px); }
 }
 
+/* 🍫 Chocolate emoji */
 #chocolate {
   position: absolute;
   top: 40%;
   left: 60%;
-  width: 70px;
+  font-size: 36px;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
@@ -67,7 +73,7 @@ body {
   color: #7a4a2e;
 }
 
-/* 🍫 Chocolate rain */
+/* 🍫 Rain */
 .choco {
   position: fixed;
   top: -30px;
@@ -82,11 +88,50 @@ body {
   }
 }
 
-/* ❤️ END CARD */
+/* 🎉 Final message screen */
+#finalScreen {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 247, 240, 0.97);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.6s ease;
+  z-index: 20;
+}
+
+#finalScreen.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#finalScreen h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 30px;
+  color: #5a2e1c;
+  margin-bottom: 10px;
+}
+
+#finalScreen p {
+  font-size: 15px;
+  color: #7a4a2e;
+  margin-bottom: 18px;
+}
+
+.tap-text {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* ❤️ Signature card */
 .signature-card {
   position: fixed;
   inset: 0;
-  background: rgba(255, 247, 240, 0.96);
+  background: rgba(255, 247, 240, 0.97);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,7 +139,7 @@ body {
   text-align: center;
   opacity: 0;
   transition: 0.6s ease;
-  z-index: 20;
+  z-index: 30;
 }
 
 .signature-card.show {
