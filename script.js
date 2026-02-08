@@ -1,46 +1,46 @@
-const playArea = document.getElementById("playArea");
-const chocolate = document.getElementById("chocolate");
-const girl = document.getElementById("girl");
-const message = document.getElementById("message");
-const finalScene = document.getElementById("final-scene");
-
 let taps = 0;
-const maxTaps = 6;
+const maxTaps = 5;
 
-// Single tap anywhere (mobile-friendly)
-playArea.addEventListener("click", () => {
-  if (taps >= maxTaps) return;
+const chocolate = document.getElementById("chocolate");
+const girl = document.getElementById("girl-container");
+const finalScreen = document.getElementById("finalScreen");
 
-  taps++;
-
-  const x = Math.random() * 80;
-  const y = Math.random() * 45;
-
-  chocolate.style.left = `${x}%`;
-  chocolate.style.top = `${y}%`;
-  girl.style.left = `${x}%`;
-
-  if (taps === maxTaps) {
-    message.textContent = "She finally caught it 🍫❤️";
-    document.querySelector(".name-bubble").style.display = "none";
-
-    chocolateRain();
-
-    setTimeout(() => {
-      finalScene.style.opacity = 1;
-    }, 1200);
+/* One-thumb tap anywhere */
+document.body.addEventListener("click", () => {
+  if (taps < maxTaps) {
+    moveChocolate();
+    moveGirl();
+    taps++;
+  } else {
+    catchChocolate();
   }
 });
 
-function chocolateRain() {
+function moveChocolate() {
+  const x = Math.random() * 70 + 10;
+  const y = Math.random() * 40 + 10;
+  chocolate.style.left = x + "%";
+  chocolate.style.top = y + "%";
+}
+
+function moveGirl() {
+  girl.style.left = chocolate.style.left;
+}
+
+function catchChocolate() {
+  chocolate.style.display = "none";
+  finalScreen.classList.add("show");
+  finalScreen.style.opacity = "1";
+  startChocolateRain();
+}
+
+function startChocolateRain() {
   for (let i = 0; i < 30; i++) {
     const drop = document.createElement("div");
-    drop.className = "choco-rain";
+    drop.classList.add("choco");
     drop.textContent = "🍫";
     drop.style.left = Math.random() * 100 + "vw";
-    drop.style.animationDelay = Math.random() * 1 + "s";
+    drop.style.animationDuration = 2 + Math.random() * 2 + "s";
     document.body.appendChild(drop);
-
-    setTimeout(() => drop.remove(), 3000);
   }
 }
