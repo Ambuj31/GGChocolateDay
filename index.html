@@ -2,58 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Catch the Chocolate 🍫</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Mobile perfect -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- Handwritten font -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="gameArea">
-  <div id="chocolate"></div>
+  <h1 class="title">Catch the Chocolate 🍫</h1>
+  <h2 class="subtitle">For Gauri ❤️</h2>
 
-  <div id="girl-container">
-    <div class="name-bubble">Gauri!</div>
-    <img src="assets/girl-3d.png" id="girl">
-  </div>
-</div>
+  <div id="gameArea">
+    <div id="chocolate"></div>
 
-<div id="finalScreen">
-  <h1>🍫 Happy Chocolate Day 🍫</h1>
-  <p>
-    You chased the sweetness,<br>
-    and caught my heart instead ❤️
-  </p>
-</div>
-
-<h1>Catch the Chocolate 🍫</h1>
-<p id="sub">For Gauri ❤️</p>
-
-<div class="play-area" id="playArea">
-
-  <!-- Girl -->
-  <div id="girl" class="running">
-    <div class="name-bubble">Gauri!</div>
-    <img src="./assets/girl-3d.png" alt="Girl chasing chocolate" id="girl">
+    <div id="girl-container">
+      <div class="name-bubble">Gauri!</div>
+      <img src="assets/girl-3d.png" id="girl" alt="Girl chasing chocolate">
+    </div>
   </div>
 
-  <!-- Chocolate -->
-  <div id="chocolate">
-    <div class="choco-3d"></div>
+  <div id="finalScreen">
+    <h1>🍫 Happy Chocolate Day 🍫</h1>
+    <p>
+      You chased the chocolate,<br>
+      but caught my heart instead ❤️
+    </p>
   </div>
 
-</div>
-
-<p id="message"></p>
-
-<!-- Cinematic Ending -->
-<div id="final-scene">
-  <h2>For Gauri ❤️</h2>
-  <p>
-    Some chocolates are meant to be caught…<br>
-    Some hearts already are.
-  </p>
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
