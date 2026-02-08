@@ -1,6 +1,7 @@
 const chocolate = document.getElementById("chocolate");
-const girl = document.getElementById("girl");
+const girlWrapper = document.getElementById("girlWrapper");
 const area = document.getElementById("gameArea");
+const finalScreen = document.getElementById("finalScreen");
 
 let count = 0;
 const max = 6;
@@ -16,20 +17,20 @@ chocolate.addEventListener("click", () => {
 });
 
 function moveChocolate() {
-  const x = Math.random() * (area.clientWidth - 80);
-  const y = Math.random() * (area.clientHeight - 80);
+  const x = Math.random() * (area.clientWidth - 50);
+  const y = Math.random() * (area.clientHeight - 50);
   chocolate.style.left = x + "px";
   chocolate.style.top = y + "px";
 }
 
 function moveGirl() {
-  girl.style.left = chocolate.style.left;
+  girlWrapper.style.left = chocolate.style.left;
 }
 
 function finishGame() {
   chocolate.style.display = "none";
   chocolateRain();
-  setTimeout(showSignature, 700);
+  setTimeout(() => finalScreen.classList.add("show"), 500);
 }
 
 function chocolateRain() {
@@ -42,6 +43,12 @@ function chocolateRain() {
     setTimeout(() => c.remove(), 3000);
   }
 }
+
+/* 👉 Tap final screen to show signature */
+finalScreen.addEventListener("click", () => {
+  finalScreen.remove();
+  showSignature();
+});
 
 function showSignature() {
   const card = document.createElement("div");
