@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chocolate Day 🍫</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<h1>Catch the Chocolate 🍫</h1>
+<p id="sub">For Gauri ❤️</p>
+
+<div class="play-area" id="playArea">
+
+  <!-- Running Girl SVG -->
+  <div id="girl" class="running">
+    <svg width="80" height="130" viewBox="0 0 80 130">
+      <circle cx="40" cy="25" r="18" fill="#f5cba7"/>
+      <rect x="25" y="45" width="30" height="50" rx="10" fill="#ff9aa2"/>
+
+      <!-- Legs -->
+      <line id="leg1" x1="35" y1="95" x2="25" y2="125" />
+      <line id="leg2" x1="45" y1="95" x2="55" y2="125" />
+    </svg>
+  </div>
+
+  <!-- Chocolate -->
+  <div id="chocolate">
+    <svg width="60" height="60" viewBox="0 0 60 60">
+      <rect x="5" y="5" width="50" height="50" rx="8" fill="#5a2d0c"/>
+      <line x1="5" y1="30" x2="55" y2="30" stroke="#3e1f0f"/>
+      <line x1="30" y1="5" x2="30" y2="55" stroke="#3e1f0f"/>
+    </svg>
+  </div>
+
+</div>
+
+<p id="message"></p>
+
+<!-- Popup -->
+<div id="popup">
+  <div class="popup-content">
+    <h2>🍫 Happy Chocolate Day</h2>
+    <p>
+      This chocolate ran away…  
+      but it always belonged to you ❤️
+    </p>
+    <button onclick="closePopup()">💖</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
