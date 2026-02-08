@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+  background: linear-gradient(to bottom right, #f7d9c4, #f3b6b6);
+  text-align: center;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  margin-top: 15px;
+  color: #5a2d0c;
+}
+
+#sub {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.4rem;
+  color: #7a3e14;
+}
+
+.play-area {
+  position: relative;
+  height: 65vh;
+}
+
+#girl {
+  position: absolute;
+  bottom: 20px;
+  left: 40%;
+  transition: left 0.7s ease;
+}
+
+#girl svg line {
+  stroke: #000;
+  stroke-width: 3;
+  transform-origin: top;
+}
+
+.running #leg1 {
+  animation: run 0.4s infinite alternate;
+}
+
+.running #leg2 {
+  animation: run 0.4s infinite alternate-reverse;
+}
+
+@keyframes run {
+  from { transform: rotate(20deg); }
+  to { transform: rotate(-20deg); }
+}
+
+#chocolate {
+  position: absolute;
+  top: 40px;
+  left: 45%;
+  transition: all 0.5s ease;
+}
+
+#message {
+  font-size: 1.4rem;
+  color: #4a1f08;
+}
+
+/* Chocolate Rain */
+.choco {
+  position: absolute;
+  top: -40px;
+  font-size: 28px;
+  animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+/* Popup */
+#popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 300px;
+}
